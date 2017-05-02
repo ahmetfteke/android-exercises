@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	dd/mm/yyyy, dd-mm-yyyy,  dd.mm.yyyy formatinda regex kodu ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$
+-->
+
+<OperatorTest timeOut="60">
+	<Operator id="1" name="Turkcell">
+		<ServiceNo id="1" no="3095">
+			<Service id="1" name="NTV SPOR">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor servisi aboneliginiz basladi. Aboneliginiz, tum vergiler dahil ayda 12TLye her ay otomatik yenilenecektir. Aylik servis ucreti haftalik 3TL olarak tahsil edilecektir. Servisi iptal etmek icin IPTAL SPOR yazip 3095e gonderebilirsiniz. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:5327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor paketine aboneliginiz bulunmaktadir. MH:05327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Talebiniz uzerine NTV Spor aboneliginiz iptal edilmistir. MH:05327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor paketine aboneliginiz bulunmamaktadir. MH:05327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+			<Service id="2" name="HABER">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber aboneliginiz basladi. Abonelik ucreti aylik 10TLdir ve her ay yenilenir. Aylik abonelik ucreti haftalik 2,5TL olarak tahsil edilir. Servisi iptal etmek icin IPTAL NTV yazip 3095e gonderebilirsiniz. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:05327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor paketine aboneliginiz bulunmaktadir. MH:05327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Talebiniz uzerine NTV Haber aboneliginiz iptal edilmistir. MH:05327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber paketine aboneliginiz bulunmamaktadir. MH:05327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+		<ServiceNo id="1" no="6617">
+			<Service id="1" name="TOTAL IDDAA">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa servisi aboneliginiz basladi. Aboneliginiz, tum vergiler dahil ayda 28TLye her ay otomatik yenilenecektir. Aylik servis ucreti haftalik 7TL olarak tahsil edilecektir. 7TL tahsil edilemezse gunluk 1TL alinir. Servisi iptal etmek icin IPTAL IDDAA yazip 6617ye gonderebilirsiniz. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:5327555445 http://m.totalspor.com</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa paketine aboneliginiz bulunmaktadir. MH:5327555445 http://m.totalspor.com</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa paketiniz iptal edilmistir. MH:5327555445 http://m.totalspor.com</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa paketine aboneliginiz bulunmamaktadir. MH: 5327555445 http://m.totalspor.com</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+		<ServiceNo id="1" no="3520">wor
+			<Service id="1" name="İLMİHALİM">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ILMIHAL</Keyword>
+							<Keyword id="2">FETVA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Ilmihalim servisi aboneliginiz basladi. FAYDALI dini bilgiler HERGUN cep telefonunuza gonderilecektir. Aboneliginizin ilk haftasi UCRETSiZDiR. Sonrasinda aboneliginiz, tum vergiler dahil ayda 9,6TLye her ay otomatik yenilenecektir. Aylik servis ucreti haftalik 2,4TL olarak tahsil edilecektir. Servisi iptal etmek icin IPTAL ILMIHAL yazip 3520ye gonderebilirsiniz. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:5327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ILMIHAL</Keyword>
+							<Keyword id="2">FETVA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisi aboneliginiz bulunmaktadır. Ilginize tesekkurler. MH:5327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="AbonelikYokkenIptal" order="3" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL ILMIHAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisine aboneliginiz bulunmamaktadir. MH:5327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL ILMIHAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisi aboneliginiz iPTAL edilmistir. Ilginize tesekkurler. MH:5327555445</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+	</Operator>	
+	<Operator id="2" name="Vodafone">
+		<ServiceNo id="1" no="3095">
+			<Service id="1" name="NTV SPOR">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE NTVSPOR</Keyword>
+							<Keyword id="2">ABONE NTV SPOR</Keyword>
+							<Keyword id="3">ABONE SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor servisi ile spor haberlerini cebinize alabilirsiniz. Abonelik vergiler dahil ayda 8TLdir ve her ay  yenilenir. Aylik ucret haftalik 2TL olarak tahsil edilir. Iptal icin IPTAL SPOR yazip 3095e gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. Aboneligi baslatmak icin EVET SPOR yazip 3095e gonderin. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">EVET SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Spor haberlerinin cebinize gonderilecegi NTV Spor aboneliginiz basladi. Abonelik ucreti vergiler dahil ayda 12TLdir ve her ay  yenilenir. Aylik ucret haftalik 3TL olarak tahsil edilir. Iptal icin IPTAL SPOR yazip 3095e gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE NTVSPOR</Keyword>
+							<Keyword id="2">ABONE NTV SPOR</Keyword>
+							<Keyword id="3">ABONE SPOR</Keyword>
+						</Keywords>		
+						<ReturnMessages>
+							<Message id="1">NTV Spor servisine aboneliginiz bulunmaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor aboneliginiz ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$ tarihinde iptal edilecektir. Bu tarihe kadar servis iceriklerini kullanmaya devam edebilirsiniz. Icerik kullanimini durdurmak icin IPTAL SPOR yazip 3095e gonderin. Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">IPTAL SPOR</Keyword>
+							<Keyword id="2">IPDAL SPOR</Keyword>
+							<Keyword id="3">PTAL SPOR</Keyword>
+							<Keyword id="4">PTL SPOR</Keyword>
+							<Keyword id="5">PDAL SPOR</Keyword>
+							<Keyword id="6">IPT SPOR</Keyword>
+							<Keyword id="7">PITAL SPOR</Keyword>
+							<Keyword id="8">PIDAL SPOR</Keyword>
+							<Keyword id="9">IPTAL NTV SPOR</Keyword>
+							<Keyword id="10">IPDAL NTV SPOR</Keyword>
+							<Keyword id="11">PTAL NTV SPOR</Keyword>
+							<Keyword id="12">PTL NTV SPOR</Keyword>
+							<Keyword id="13">PDAL NTV SPOR</Keyword>
+							<Keyword id="14">IPT NTV SPOR</Keyword>
+							<Keyword id="15">PITAL NTV SPOR</Keyword>
+							<Keyword id="16">PIDAL NTV SPOR</Keyword>
+							<Keyword id="17">IPTAL NTVSPOR</Keyword>
+							<Keyword id="18">IPDAL NTVSPOR</Keyword>
+							<Keyword id="19">PTAL NTVSPOR</Keyword>
+							<Keyword id="20">PTL NTVSPOR</Keyword>
+							<Keyword id="21">PDAL NTVSPOR</Keyword>
+							<Keyword id="22">IPT NTVSPOR</Keyword>
+							<Keyword id="23">PITAL NTVSPOR</Keyword>
+							<Keyword id="24">PIDAL NTVSPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Talebiniz uzerine NTV Spor aboneliginiz iptal edilmistir. Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor servisine aboneliginiz bulunmamaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="5" name="Yardim" order="5" description="Yardım Mesajı">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">YARDIM</Keyword>
+							<Keyword id="2">YARD1M</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Abone olmak icin ABONE bosluk SERVIS ADI, aboneliginizi iptal etmek icin IPTAL bosluk SERVIS ADI yazip 3095e gonderin. (Orn: ABONE NTV)</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+			<Service id="2" name="NTV Haber">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE NTV</Keyword>
+							<Keyword id="2">ABONE NTV HABER</Keyword>
+							<Keyword id="3">ABONE HABER</Keyword>
+							<Keyword id="4">ABONE NTVHABER</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber servisi ile son dakika haberlerini cebinize alabilirsiniz. Abonelik vergiler dahil ayda 8TLdir ve her ay  yenilenir. Aylik ucret haftalik 2TL olarak tahsil edilir. Iptal icin IPTAL NTV yazip 3095e gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. Aboneligi baslatmak icin EVET NTV yazip 3095e gonderin. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">EVET NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Son dakika haberlerinin cebinize gonderilecegi NTV Haber aboneliginiz basladi. Abonelik ucreti vergiler dahil ayda 8TLdir ve her ay  yenilenir. Aylik ucret haftalik 2TL olarak tahsil edilir. Iptal icin IPTAL NTV yazip 3095e gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE NTV</Keyword>
+							<Keyword id="2">ABONE NTV HABER</Keyword>
+							<Keyword id="3">ABONE HABER</Keyword>
+							<Keyword id="4">ABONE NTVHABER</Keyword>
+						</Keywords>		
+						<ReturnMessages>
+							<Message id="1">NTV Haber servisine aboneliginiz bulunmaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber aboneliginiz ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$tarihinde iptal edilecektir. Bu tarihe kadar servis iceriklerini kullanmaya devam edebilirsiniz. Icerik kullanimini durdurmak icin IPTAL NTV yazip 3095e gonderin.  Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">IPTAL NTV</Keyword>
+							<Keyword id="2">IPDAL NTV</Keyword>
+							<Keyword id="3">PTAL NTV</Keyword>
+							<Keyword id="4">PTL NTV</Keyword>
+							<Keyword id="5">PDAL NTV</Keyword>
+							<Keyword id="6">IPT NTV</Keyword>
+							<Keyword id="7">PITAL NTV</Keyword>
+							<Keyword id="8">PIDAL NTV</Keyword>
+							<Keyword id="9">IPTAL NTV HABER</Keyword>
+							<Keyword id="10">IPDAL NTV HABER</Keyword>
+							<Keyword id="11">PTAL NTV HABER</Keyword>
+							<Keyword id="12">PTL NTV HABER</Keyword>
+							<Keyword id="13">PDAL NTV HABER</Keyword>
+							<Keyword id="14">IPT NTV HABER</Keyword>
+							<Keyword id="15">PITAL NTV HABER</Keyword>
+							<Keyword id="16">PIDAL NTV HABER</Keyword>
+							<Keyword id="17">IPTAL NTVHABER</Keyword>
+							<Keyword id="18">IPDAL NTVHABER</Keyword>
+							<Keyword id="19">PTAL NTVHABER</Keyword>
+							<Keyword id="20">PTL NTVHABER</Keyword>
+							<Keyword id="21">PDAL NTVHABER</Keyword>
+							<Keyword id="22">IPT NTVHABER</Keyword>
+							<Keyword id="23">PITAL NTVHABER</Keyword>
+							<Keyword id="24">PIDAL NTVHABER</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Talebiniz uzerine NTV Haber aboneliginiz iptal edilmistir. Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber servisine aboneliginiz bulunmamaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="5" name="Yardim" order="5" description="Yardım Mesajı">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">YARDIM</Keyword>
+							<Keyword id="2">YARD1M</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Abone olmak icin ABONE bosluk SERVIS ADI, aboneliginizi iptal etmek icin IPTAL bosluk SERVIS ADI yazip 3095e gonderin. (Orn: ABONE NTV)</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+		<ServiceNo id="2" no="6617">
+			<Service id="1" name="TOTAL IDDAA">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE TOTAL IDDAA</Keyword>
+							<Keyword id="2">ABONE IDDAA</Keyword>
+							<Keyword id="3">ABONE TOTALIDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa servisi ile iddaa tuyolarini cebinize alabilirsiniz. Abonelik vergiler dahil ayda 28TLdir ve her ay  yenilenir. Aylik ucret haftalik 7TL olarak tahsil edilir. 7TL tahsil edilemezse gunluk 1TL alinir.Iptal icin IPTAL IDDAA yazip 6617ye gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. Aboneligi baslatmak icin EVET IDDAA yazip 6617ye gonderin. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">EVET IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Iddaa tuyolarinin cebinize gonderilecegi Total Iddaa aboneliginiz basladi. Abonelik ucreti vergiler dahil ayda 28TLdir ve her ay  yenilenir. Aylik ucret haftalik 7TL olarak tahsil edilir. 7TL tahsil edilemezse gunluk 1TL alinir. Iptal icin IPTAL IDDAA yazip 6617ye gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE TOTAL IDDAA</Keyword>
+							<Keyword id="2">ABONE IDDAA</Keyword>
+							<Keyword id="3">ABONE TOTALIDDAA</Keyword>
+						</Keywords>		
+						<ReturnMessages>
+							<Message id="1">Total Iddaa servisine aboneliginiz bulunmaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa aboneliginiz ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$ tarihinde iptal edilecektir. Bu tarihe kadar servis iceriklerini kullanmaya devam edebilirsiniz. Icerik kullanimini durdurmak icin IPTAL IDDAA yazip 6617ye gonderin. Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">IPTAL IDDAA</Keyword>
+							<Keyword id="2">IPDAL IDDAA</Keyword>
+							<Keyword id="3">PTAL IDDAA</Keyword>
+							<Keyword id="4">PTL IDDAA</Keyword>
+							<Keyword id="5">PDAL IDDAA</Keyword>
+							<Keyword id="6">IPT IDDAA</Keyword>
+							<Keyword id="7">PITAL IDDAA</Keyword>
+							<Keyword id="8">PIDAL IDDAA</Keyword>
+							<Keyword id="9">IPTAL TOTAL IDDAA</Keyword>
+							<Keyword id="10">IPDAL TOTAL IDDAA</Keyword>
+							<Keyword id="11">PTAL TOTAL IDDAA</Keyword>
+							<Keyword id="12">PTL TOTAL IDDAA</Keyword>
+							<Keyword id="13">PDAL TOTAL IDDAA</Keyword>
+							<Keyword id="14">IPT TOTAL IDDAA</Keyword>
+							<Keyword id="15">PITAL TOTAL IDDAA</Keyword>
+							<Keyword id="16">PIDAL TOTAL IDDAA</Keyword>
+							<Keyword id="17">IPTAL TOTALIDDAA</Keyword>
+							<Keyword id="18">IPDAL TOTALIDDAA</Keyword>
+							<Keyword id="19">PTAL TOTALIDDAA</Keyword>
+							<Keyword id="20">PTL TOTALIDDAA</Keyword>
+							<Keyword id="21">PDAL TOTALIDDAA</Keyword>
+							<Keyword id="22">IPT TOTALIDDAA</Keyword>
+							<Keyword id="23">PITAL TOTALIDDAA</Keyword>
+							<Keyword id="24">PIDAL TOTALIDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Talebiniz uzerine Total Iddaa aboneliginiz iptal edilmistir.Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa servisine aboneliginiz bulunmamaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="5" name="Yardim" order="5" description="Yardım Mesajı">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">YARDIM</Keyword>
+							<Keyword id="2">YARD1M</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Abone olmak icin ABONE bosluk SERVIS ADI, aboneliginizi iptal etmek icin IPTAL bosluk SERVIS ADI yazip 6617ye gonderin. (Orn: ABONE GANYAN)</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+		<ServiceNo id="3" no="3520">
+			<Service id="1" name="İLMİHALİM">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE ILMIHALIM</Keyword>
+							<Keyword id="2">ABONE ILMIHAL</Keyword>
+							<Keyword id="3">ABONE FETVA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Ilmihalim servisi ile dini bilgileri cebinize alabilirsiniz. Abonelik ilk hafta UCRETSiZ, devaminda vergiler dahil ayda 9,6TLdir ve her ay  yenilenir. Aylik ucret haftalik 2,4TL olarak tahsil edilir. Iptal icin IPTAL ILMIHAL yazip 3520ye gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. Aboneligi baslatmak icin EVET ILMIHAL yazip 3520ye gonderin. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">EVET ILMIHAL</Keyword>
+							<Keyword id="2">EVET ILMIHALIM</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Dini bilgileri cebinize alacaginiz Ilmihalim aboneliginiz basladi. Aboneliginiz ilk hafta UCRETSiZdir, devaminda vergiler dahil ayda 9,6 TLye her ay yenilenecektir. Aylik ucret, haftalik 2,4 TL olarak tahsil edilecektir.. Iptal icin IPTAL ILMIHAL yazip 3520ye gonderin. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">ABONE ILMIHALIM</Keyword>
+							<Keyword id="2">ABONE ILMIHAL</Keyword>
+							<Keyword id="3">ABONE FETVA</Keyword>
+						</Keywords>		
+						<ReturnMessages>
+							<Message id="1">Ilmihalim servisine aboneliginiz bulunmaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Ilmihalim aboneliginiz ^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$ tarihinde iptal edilecektir. Bu tarihe kadar servis iceriklerini kullanmaya devam edebilirsiniz. Icerik kullanimini durdurmak icin IPTAL ILMIHAL yazip 3520ye gonderin. Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">IPTAL ILMIHAL</Keyword>
+							<Keyword id="2">IPDAL ILMIHAL</Keyword>
+							<Keyword id="3">PTAL ILMIHAL</Keyword>
+							<Keyword id="4">PTL ILMIHAL</Keyword>
+							<Keyword id="5">PDAL ILMIHAL</Keyword>
+							<Keyword id="6">IPT ILMIHAL</Keyword>
+							<Keyword id="7">PITAL ILMIHAL</Keyword>
+							<Keyword id="8">PIDAL ILMIHAL</Keyword>
+							<Keyword id="9">IPTAL ILMIHALIM</Keyword>
+							<Keyword id="10">IPDAL ILMIHALIM</Keyword>
+							<Keyword id="11">PTAL ILMIHALIM</Keyword>
+							<Keyword id="12">PTL ILMIHALIM</Keyword>
+							<Keyword id="13">PDAL ILMIHALIM</Keyword>
+							<Keyword id="14">IPT ILMIHALIM</Keyword>
+							<Keyword id="15">PITAL ILMIHALIM</Keyword>
+							<Keyword id="16">PIDAL ILMIHALIM</Keyword>
+							<Keyword id="17">IPTAL FETVA</Keyword>
+							<Keyword id="18">IPDAL FETVA</Keyword>
+							<Keyword id="19">PTAL FETVA</Keyword>
+							<Keyword id="20">PTL FETVA</Keyword>
+							<Keyword id="21">PDAL FETVA</Keyword>
+							<Keyword id="22">IPT FETVA</Keyword>
+							<Keyword id="23">PITAL FETVA</Keyword>
+							<Keyword id="24">PIDAL FETVA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Talebiniz uzerine Ilmihalim aboneliginiz iptal edilmistir. Iptal edilen donem icin ucret iadesi yapilmaz. Yeniden abonelik baslatmadiginiz taktirde ucretlendirilmeyeceksiniz. MH:2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL</Keyword>
+							<Keyword id="2">IPDAL</Keyword>
+							<Keyword id="3">PTAL</Keyword>
+							<Keyword id="4">PDAL</Keyword>
+							<Keyword id="5">IPT</Keyword>
+							<Keyword id="6">PITAL</Keyword>
+							<Keyword id="7">PIDAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Ilmihalim servisine aboneliginiz bulunmamaktadir. MH.2164740200 YBS AS.</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="5" name="Yardim" order="5" description="Yardım Mesajı">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">YARDIM</Keyword>
+							<Keyword id="2">YARD1M</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Abone olmak icin ABONE bosluk SERVIS ADI, aboneliginizi iptal etmek icin IPTAL bosluk SERVIS ADI yazip 3520ye gonderin. (Orn: ABONE YASAM)</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+	</Operator>
+	<Operator id="3" name="Turk Telekom">
+		<ServiceNo id="1" no="3095">
+			<Service id="1" name="NTV SPOR">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">SPOR</Keyword>
+							<Keyword id="2">NTVSPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor aboneliginiz basladi. Aboneliginiz vergiler dahil 2TLye her hafta yenilenecektir. Iptal etmek icin IPTAL SPOR yazip 3095e gonderebilirsiniz. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">SPOR</Keyword>
+							<Keyword id="1">NTVSPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor paketine aboneliginiz bulunmaktadir. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Talebiniz uzerine NTV Spor paketi aboneliginiz iptal edilmistir. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL SPOR</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Spor paketine aboneliginiz bulunmamaktadir. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+			<Service id="2" name="NTV HABER">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber paketiniz basladi. Son dakika haberleri hergun cebinize gonderilecek. Paket ucreti haftalik 2 TLdir ve her hafta otomatik yenilenir. Iptal icin IPTAL NTV yazip 3095e gonderebilirsiniz. MH: 05557383077</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber paketin bulunmaktadir. MH: 05557383077</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber paketiniz iptal edilmistir. MH: 05557383077</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL NTV</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">NTV Haber paketin bulunmamaktadir. MH: 05557383077</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+		<ServiceNo id="1" no="6617">
+			<Service id="1" name="TOTAL IDDAA">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Uzman editorlerimiz tarafindan hazirlanan mac tuyolarinin cep telefonunuza gonderilecegi Total Iddaa aboneliginiz basladi. Pakete ilk defa uye oluyorsaniz ilk 1 hafta boyunca herhangi bir ucret odemezsiniz. Ucretsiz donem sonrasi aboneliginiz vergiler dahil haftalik 7 TLye her hafta yenilenecektir. Iptal icin IPTAL IDDAA yazip 6617ye gonderebilirsiniz. Iptal talep edilen donem icin ucret iadesi yapilmaz. MH:2164740200 http://m.totalspor.com</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa servisine aboneliginiz bulunmaktadir. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa aboneliginiz haftalik abonelik donemi sonunda iptal edilecektir. Bu tarihe icerik kullanmaya devam edebilirsiniz. Donem sonunu beklemeden hemen iptal etmek istiyorsaniz IPTAL IDDAA yazip 6617ye gonderebilirsiniz. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">IPTAL IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa aboneliginiz iptal edilmistir. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL IDDAA</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">Total Iddaa servisine aboneliginiz bulunmamaktadir. MH:2164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+		<ServiceNo id="1" no="3520">
+			<Service id="1" name="İLMİHALİM">
+				<ServiceTest id="1" name="Abonelik" order="1" description="Başarılı yeni abonelik">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">FETVA</Keyword>
+							<Keyword id="2">ILMIHAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisi aboneliginiz basladi. FAYDALI dini bilgiler HERGUN cep telefonunuza gonderilecektir. Aboneliginiz ilk hafta UCRETSiZdir, devaminda vergiler dahil 2,4 TLye her hafta yenilenecektir. Iptal etmek isterseniz IPTAL ILMIHAL yazip 3520ye gonderebilirsiniz. MH:02164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="2" name="AbonelikBulunmakta" order="2" description="Zaten abonesiniz">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">FETVA</Keyword>
+							<Keyword id="2">ILMIHAL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisi aboneliginiz bulunmaktadır. Ilginize tesekkurler. MH:02164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="3" name="Iptal" order="3" description="Başarılı iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL MOBIL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisi aboneliginiz haftalik abonelik donemi sonunda iPTAL edilecektir. Bu tarihe kadar servis iceriklerini kullanmaya devam edebilirsiniz. Icerik kullanimini durdurmak icin IPTAL ILMIHAL yazip 3520ye gonderebilirsiniz. MH:02164740200</Message>
+						</ReturnMessages>
+					</Step>
+					<Step id="2">
+						<Keywords>
+							<Keyword id="1">IPTAL MOBIL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisi aboneliginiz iPTAL edilmistir. Ilginize tesekkurler. MH:02164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+				<ServiceTest id="4" name="AbonelikYokkenIptal" order="4" description="Başarısız iptal">
+					<Step id="1">
+						<Keywords>
+							<Keyword id="1">IPTAL MOBIL</Keyword>
+						</Keywords>
+						<ReturnMessages>
+							<Message id="1">iLMiHALiM Servisine aboneliginiz bulunmamaktadir. MH:502164740200</Message>
+						</ReturnMessages>
+					</Step>
+				</ServiceTest>
+			</Service>
+		</ServiceNo>
+	</Operator>	
+</OperatorTest>
+

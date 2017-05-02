@@ -1,0 +1,9 @@
+[
+{"msisdn":"05358264633", "Description":"Uzay Ordu"}
+,
+{"msisdn":"05373018200", "Description":"Bülent Türkmen"}
+,
+{"msisdn":"05356814086", "Description":"Hüseyin Çabuk"}
+,
+{"msisdn":"05335423430", "Description":"Fatih Özen"}
+]

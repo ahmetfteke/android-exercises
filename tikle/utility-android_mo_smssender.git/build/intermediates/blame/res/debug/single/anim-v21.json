@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\tikle\\utility-android_mo_smssender.git\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_appbar_state_list_animator.xml",
+        "source": "F:\\tikle\\utility-android_mo_smssender.git\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0-beta1\\res\\anim-v21\\design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "F:\\tikle\\utility-android_mo_smssender.git\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "F:\\tikle\\utility-android_mo_smssender.git\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0-beta1\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "F:\\tikle\\utility-android_mo_smssender.git\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "F:\\tikle\\utility-android_mo_smssender.git\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0-beta1\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+    }
+]

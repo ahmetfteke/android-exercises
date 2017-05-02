@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\tikle\utility-android_mo_smssender.git\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="F:\tikle\utility-android_mo_smssender.git\build\intermediates\pre-dexed\debug\com.android.support-multidex-1.0.1_9da15d8a38e7f1d2aaacc918be73de49d258e3a0.jar" />
+    </item>
+    <item
+        jar="F:\tikle\utility-android_mo_smssender.git\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="F:\tikle\utility-android_mo_smssender.git\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.1_714148e167d4d90ffb83b191c0a5b37ba746603d.jar" />
+    </item>
+    <item
+        jar="F:\tikle\utility-android_mo_smssender.git\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="F:\tikle\utility-android_mo_smssender.git\build\intermediates\pre-dexed\debug\internal_impl-22.2.1_7fd0a57a3ae73e664baeee5767548f16d7a92369.jar" />
+    </item>
+    <item
+        jar="C:\android-sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="F:\tikle\utility-android_mo_smssender.git\build\intermediates\pre-dexed\debug\support-annotations-22.2.1_2e3fe2a5e0cc786845193d0bea3c2664a1719ce0.jar" />
+    </item>
+    <item
+        jar="F:\tikle\utility-android_mo_smssender.git\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="F:\tikle\utility-android_mo_smssender.git\build\intermediates\pre-dexed\debug\com.android.support-support-v4-22.2.1_a493cd1b84c74e705d49731f5e126394cd685206.jar" />
+    </item>
+    <item
+        jar="F:\tikle\utility-android_mo_smssender.git\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="efec67655f6db90757faa37201efcee2a9ec3507">
+        <dex dex="F:\tikle\utility-android_mo_smssender.git\build\intermediates\pre-dexed\debug\android-support-v4_31ee69c3e07f5f0566062230fff9801f9f53db85.jar" />
+    </item>
+
+</items>
